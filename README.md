@@ -15,7 +15,7 @@ For a better experience, execute the notebooks within a Google Colab environment
 
 ## Authors
 
-* **Thibault Douzon** - [pLOPeGG](https://github.com/pLOPeGG)
+* **Thibault Douzon** - [thibaultdouzon](https://github.com/thibaultdouzon)
 * **Jérémy Espinas**
 * **Clément Sage** - [clemsage](https://github.com/clemsage)
 * **Bertrand Buffat** - [berbuf](https://github.com/berbuf)

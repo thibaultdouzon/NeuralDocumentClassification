@@ -3,7 +3,7 @@ __pycache__
 .vscode
 .ipynb_checkpoints
 .venv
-
+.mypy_cache
 
 logs
 dataset

@@ -1,0 +1,15 @@
+{
+    "name": "jordyvl/rvl_cdip_easyocr",
+    "sizes": {
+        "train": 5000,
+        "test": 1000,
+        "validation": 500
+    },
+    "classes": [
+        "email",
+        "form",
+        "handwritten",
+        "invoice",
+        "advertisement"
+    ]
+}
