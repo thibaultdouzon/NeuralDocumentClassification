@@ -62,4 +62,4 @@ def main(key: str, output_folder: str) -> None:
 
 
 if __name__ == "__main__":
-    download_and_extract()  # type: ignore
+    main()
