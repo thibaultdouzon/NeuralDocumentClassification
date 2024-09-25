@@ -31,16 +31,6 @@ gdrive_files = {
 }
 
 
-@click.command()
-@click.option(
-    "--key",
-    help="Key to download from Google Drive [train | test | validation | all]",
-)
-@click.option(
-    "--output_folder",
-    default="./dataset/",
-    help="Path to save the downloaded file",
-)
 def download_and_extract(key: str, output_folder: str) -> None:
     assert key in ["train", "test", "validation", "all"]
     if key == "all":
@@ -58,6 +48,20 @@ def download_and_extract(key: str, output_folder: str) -> None:
         if not os.path.exists(destination_file):
             print(f"Downloading {destination_file} from Google Drive")
             gdown.download(id=remote_file.id, output=destination_file, quiet=False)
+
+
+@click.command()
+@click.option(
+    "--key",
+    help="Key to download from Google Drive [train | test | validation | all]",
+)
+@click.option(
+    "--output_folder",
+    default="./dataset/",
+    help="Path to save the downloaded file",
+)
+def main(key: str, output_folder: str) -> None:
+    download_and_extract(key, output_folder)
 
 
 if __name__ == "__main__":

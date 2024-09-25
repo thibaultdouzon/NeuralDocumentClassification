@@ -30,6 +30,8 @@ class_to_idx: Final = {
 
 idx_to_class: Final = list(class_to_idx.keys())
 
+kept_class_names = ["email", "form", "handwritten", "invoice", "advertisement"]
+
 
 class DatasetSizes(TypedDict):
     train: int
@@ -60,6 +62,7 @@ def prune_dataset(
         with tqdm.tqdm(total=dataset_description.sizes[split], desc=split) as pbar:  # type: ignore
             for data in dataset[split]:
                 if idx_to_class[data["label"]] in dataset_description.classes:
+                    data["label"] = kept_class_names.index(idx_to_class[data["label"]])
                     new_dataset_data[split].append(data)
                     pbar.update(1)
                 if len(new_dataset_data[split]) == dataset_description.sizes[split]:  # type: ignore
@@ -71,7 +74,7 @@ def prune_dataset(
 @click.command()
 @click.option(
     "--dataset_description_file",
-    default="dataset_descriptions.json",
+    default="dataset_description.json",
     help="Path to the dataset description file",
 )
 @click.option("--output_dir", default="dataset", help="Path to the output directory")
