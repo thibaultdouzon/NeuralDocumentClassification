@@ -1,12 +1,9 @@
 import os
 from dataclasses import dataclass
 from os import path
-from typing import Optional
 
 import click
 import gdown
-import requests
-import tqdm
 
 
 @dataclass
@@ -65,4 +62,4 @@ def main(key: str, output_folder: str) -> None:
 
 
 if __name__ == "__main__":
-    download_and_extract()
+    download_and_extract()  # type: ignore
