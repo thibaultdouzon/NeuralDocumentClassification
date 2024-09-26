@@ -4,10 +4,11 @@ Document image classification with neural networks on a subset of the RVL-CDIP d
 
 ## Getting Started
 
-The classification problem is tackled with two different approaches:
+The classification problem is tackled with three different approaches:
 
-* Visual approach over the image pixels with dense only and convolutional neural networks: ```skeleton.ipynb```
-* Textual approach over the recognized image words with bag-of-words and word embedding models: ```skeleton_ocr.ipynb```
+* Visual approach over the image pixels with dense only and convolutional neural networks: ```chapter_1_vision.ipynb```
+* Textual approach over the recognized image words with bag-of-words, word embedding models and pre-trained transformers: ```chapter_2_text.ipynb```
+* Lazy approach, using a multimodal LLM to perform the classfication without any finetuning. Time to practice prompt engineering techniques: ```chapter_3_vllm.ipynb```
 
 It is recommended to begin with the visual approach as it includes more details about the computing environment setup and the dataset.
 
