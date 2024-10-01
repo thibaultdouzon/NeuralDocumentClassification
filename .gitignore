@@ -10,4 +10,5 @@ dataset
 tmp
 bert*
 
+LayoutLM_rvl-cdip
 NeuralDocumentClassification
