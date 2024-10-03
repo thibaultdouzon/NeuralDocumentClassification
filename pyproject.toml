@@ -13,6 +13,7 @@ dependencies = [
     "matplotlib>=3.9.2",
     "nltk>=3.9.1",
     "numpy>=2.1.1",
+    "openai>=1.51.0",
     "pillow>=10.4.0",
     "polars>=1.8.1",
     "pydantic>=2.9.2",
